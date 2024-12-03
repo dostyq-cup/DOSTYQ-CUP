@@ -318,7 +318,7 @@ body{
     .content_cup{
         height: 2200px;  
         font-family: "Cormorant", serif;
-        background-color: blueviolet;
+        width: 100%;
     }
 
     .navigation{
@@ -332,10 +332,10 @@ body{
 
     .groups {
         height: 60%;
-        width: 94%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: bisque;
+
         margin: auto;
         padding-top: 10px;
     }
@@ -349,7 +349,7 @@ body{
         position:relative;
         left: 4%;
         margin-top: 35px;
-        background-color: blue;
+
     }
 
     .group_cards3{
@@ -362,8 +362,7 @@ body{
         left: 55%;
         bottom: 62.12%;
         justify-content: space-between;
-        
-        background-color: blue;
+
     }
 
     .group_cards2{
@@ -377,7 +376,7 @@ body{
         justify-content: space-between;
         margin-top: 35px;
         align-items: center;
-        background-color: blue;
+
 
     }
 
