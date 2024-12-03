@@ -360,7 +360,7 @@ body{
         flex-direction: column;
         position:relative;
         left: 55%;
-        bottom: 56.95%;
+        bottom: 46.85%;
         justify-content: space-between;
 
     }
@@ -372,7 +372,7 @@ body{
         display: flex;
         flex-direction: column;
         position: relative;
-        bottom: 575px;
+        bottom: 545px;
         justify-content: space-between;
         margin-top: 35px;
         align-items: center;
