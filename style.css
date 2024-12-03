@@ -341,7 +341,7 @@ body{
     }
 
     .group_cards{
-        height: 780px;
+        height: 680px;
         width: 80%;
         flex-direction: column;
         display: flex;
@@ -360,19 +360,19 @@ body{
         flex-direction: column;
         position:relative;
         left: 55%;
-        bottom: 58.9%;
+        bottom: 61.95%;
         justify-content: space-between;
 
     }
 
     .group_cards2{
-        height: 640px;
+        height: 560px;
         width: 66%;
         margin: auto;
         display: flex;
         flex-direction: column;
         position: relative;
-        bottom: 675px;
+        bottom: 605px;
         justify-content: space-between;
         margin-top: 35px;
         align-items: center;
