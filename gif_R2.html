@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div class="nav_gif">
+
+
+        <div class="gif_left">
+            <a href="index.html"><h1>ГИФ-Р2</h1></a>
+        </div>
+
+        <div class="gif_right">
+
+            <div class="gif_right_1">
+                <a href="abd1.html"><button class="gif_right_btn">АБД-1</button></a>
+                <a href="avg_R.html"><button class="gif_right_btn">АВГ-Р</button></a>
+                <a href="bh_K1.html"><button class="gif_right_btn">БХ-Қ1</button></a>
+                <a href="bh_K2.html"><button class="gif_right_btn">БХ-Қ2</button></a>
+                <a href="bh_K3.html"><button class="gif_right_btn">БХ-Қ3</button></a>
+                <a href="bh_R.html"><button class="gif_right_btn">БХ-Р</button></a>
+                <a href="#"><button class="gif_right_btn">ГИФ-Р2</button></a>
+                <a href="gif_R3.html"><button class="gif_right_btn">ГИФ-Р3</button></a>
+                <a href="da_K.html"><button class="gif_right_btn">ДА-Қ</button></a>
+            </div>
+
+            <div class="gif_right_1">
+                <a href="dk_K.html"><button class="gif_right_btn">ДҚ-Қ</button></a>
+                <a href="ia-R.html"><button class="gif_right_btn">ИА-Р</button></a>
+                <a href="ka_K.html"><button class="gif_right_btn">ҚӘ-Қ</button></a>
+                <a href="mg_K.html"><button class="gif_right_btn">МГ-Қ3</button></a>
+                <a href="mi_K.html"><button class="gif_right_btn">МИ-Қ3</button></a>
+                <a href="mf_K2.html"><button class="gif_right_btn">МФ-Қ2</button></a>
+                <a href="mf_K3.html"><button class="gif_right_btn">МФ-Қ3</button></a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="content_gif_R2">
+
+        <div id="alert" class="alert"></div>
+
+        <div class="innercontent_gif_R2">
+
+            <div class="left_inner_gif">
+                <caption>Топтағы оқушылар:</caption>
+
+                <table class="table table-hover">
+                    
+                    <thead>
+                        <th>
+                            №
+                        </th>
+                        <th>
+                            ФИО:
+                        </th>
+                        <th>
+                            Тобы:
+                        </th>
+                    </thead>
+            
+                    <tbody id="remainingTableBody">
+            
+                        
+            
+                    </tbody>
+            
+                </table>
+
+            </div>
+
+            <div class="center_inner_gif">
+                <caption>Таңдалған оқушылар:</caption>
+
+                <table class="table table-hover">
+                    
+        
+                    <thead>
+                        <th>
+                            №
+                        </th>
+                        <th>
+                            ФИО:
+                        </th>
+                        <th>
+                            Тобы:
+                        </th>
+                    </thead>
+            
+                    <tbody id="addedTableBody">
+            
+                        
+            
+                    </tbody>
+            
+                </table>
+
+            </div>
+
+            <div class="right_inner_gif">
+                <div class="gif_btn_gen">
+                    <button id="generateButton">Таңдау</button>
+                    <button id="resetButton">Қалпына келтіру</button>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+    
+
+    
+
+    <!-- <div class="table_content"> 
+        
+        
+
+       
+
+        <button id="generateButton">Generate</button>
+        <button id="resetButton">Сбросить страницу</button>
+            
+    </div> -->
+    
+</body>
+
+<script>
+
+const gifR2 = [
+            { id: "1", name: "Каримов Султанмурат", group: "ГИФ-Р2" },
+            { id: "2", name: "Абсатар Дидар", group: "ГИФ-Р2" },
+            { id: "3", name: "Ержан Дарын", group: "ГИФ-Р2" },
+            { id: "4", name: "Ачилов Эльдар", group: "ГИФ-Р2" },
+            { id: "5", name: "Мейрамхан Толғанай", group: "ГИФ-Р2" },
+            { id: "6", name: "Ашымжанова Дилнора", group: "ГИФ-Р2" },
+            { id: "7", name: "Алибек Ілияс", group: "ГИФ-Р2" },
+            { id: "8", name: "Умырбек Санжар", group: "ГИФ-Р2" },
+            { id: "9", name: "Хализов Дамир", group: "ГИФ-Р2" },
+            { id: "10", name: "Ким Максим", group: "ГИФ-Р2" },
+            { id: "11", name: "Азаматұлы Диас", group: "ГИФ-Р2" }
+        ];
+
+        const remainingKey = 'remainingStudentsPage1';
+        const addedKey = 'addedStudentsPage1';
+
+        function saveToLocalStorage(key, data) {
+            localStorage.setItem(key, JSON.stringify(data));
+        }
+
+        function loadFromLocalStorage(key) {
+            const data = localStorage.getItem(key);
+            return data ? JSON.parse(data) : [];
+        }
+
+        let remainingStudents = loadFromLocalStorage(remainingKey) || [...gifR2];
+        let addedStudents = loadFromLocalStorage(addedKey) || [];
+
+        const generateButton = document.getElementById('generateButton');
+        const resetButton = document.getElementById('resetButton');
+        const alertBox = document.getElementById('alert');
+        const addedTableBody = document.getElementById('addedTableBody');
+        const remainingTableBody = document.getElementById('remainingTableBody');
+
+        function updateTables() {
+            addedTableBody.innerHTML = '';
+            remainingTableBody.innerHTML = '';
+
+            addedStudents.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${student.id}</td><td>${student.name}</td><td>${student.group}</td>`;
+                addedTableBody.appendChild(row);
+            });
+
+            remainingStudents.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${student.id}</td><td>${student.name}</td><td>${student.group}</td>`;
+                remainingTableBody.appendChild(row);
+            });
+        }
+
+        function showAlert(message) {
+            alertBox.textContent = message;
+            alertBox.classList.add('show');
+            setTimeout(() => {
+                alertBox.classList.remove('show');
+            }, 3000);
+        }
+
+        generateButton.addEventListener('click', () => {
+            if (remainingStudents.length > 0) {
+                const randomIndex = Math.floor(Math.random() * remainingStudents.length);
+                const student = remainingStudents.splice(randomIndex, 1)[0];
+
+                showAlert(`Оқушының есімі: ${student.name}, тобы: ${student.group}`);
+
+                setTimeout(() => {
+                    addedStudents.push(student);
+                    saveToLocalStorage(remainingKey, remainingStudents);
+                    saveToLocalStorage(addedKey, addedStudents);
+                    updateTables();
+                }, 3000);
+            } else {
+                alert("Все студенты уже добавлены.");
+            }
+        });
+
+        resetButton.addEventListener('click', () => {
+            remainingStudents = [...gifR2];
+            addedStudents = [];
+            saveToLocalStorage(remainingKey, remainingStudents);
+            saveToLocalStorage(addedKey, addedStudents);
+            updateTables();
+        });
+
+        updateTables();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // // Исходный массив
+    // var gifR2 = [
+    //     { id: "1", name: "Каримов Султанмурат", group: "GIF-R2" },
+    //     { id: "2", name: "Абсатар Дидар", group: "GIF-R2" },
+    //     { id: "3", name: "Ержан Дарын", group: "GIF-R2" },
+    //     { id: "4", name: "Ачилов Эльдар", group: "GIF-R2" },
+    //     { id: "5", name: "Мейрамхан Толғанай", group: "GIF-R2" },
+    //     { id: "6", name: "Ашымжанова Дилнора", group: "GIF-R2" },
+    //     { id: "7", name: "Алибек Ілияс", group: "GIF-R2" },
+    //     { id: "8", name: "Умырбек Санжар", group: "GIF-R2" },
+    //     { id: "9", name: "Хализов Дамир", group: "GIF-R2" },
+    //     { id: "10", name: "Ким Максим", group: "GIF-R2" },
+    //     { id: "11", name: "Азаматұлы Диас", group: "GIF-R2" }
+        
+    // ];
+
+    // const remainingKey = 'remainingStudentsPage1';
+    // const addedKey = 'addedStudentsPage1';
+
+    // const button = document.getElementById('generateButton');
+    // const tableBody = document.getElementById('tableBody');
+
+
+
+    // // Функция для работы с Local Storage
+    // function saveToLocalStorage(key, data) {
+    //         localStorage.setItem(key, JSON.stringify(data));
+    //     }
+
+    //     function loadFromLocalStorage(key) {
+    //         const data = localStorage.getItem(key);
+    //         return data ? JSON.parse(data) : null;
+    //     }
+
+    //     // Загружаем данные или используем исходные
+    //     let remainingStudents = loadFromLocalStorage('remainingKey') || gifR2;
+    //     let addedStudents = loadFromLocalStorage('addedKey') || [];
+
+    //     // Получаем элементы DOM
+    //     const generateButton = document.getElementById('generateButton');
+    //     const resetButton = document.getElementById('resetButton');
+    //     const alertBox = document.getElementById('alert');
+    //     const addedTableBody = document.getElementById('addedTableBody');
+    //     const remainingTableBody = document.getElementById('remainingTableBody');
+
+    //     // Функция для обновления таблиц
+    //     function updateTables() {
+    //         // Очистка таблиц
+    //         addedTableBody.innerHTML = '';
+    //         remainingTableBody.innerHTML = '';
+
+    //         // Заполняем таблицу добавленных студентов
+    //         addedStudents.forEach(student => {
+    //             const row = document.createElement('tr');
+    //             const idCell = document.createElement('td');
+    //             const nameCell = document.createElement('td');
+    //             const groupCell = document.createElement('td');
+    //             idCell.textContent = student.id;
+    //             nameCell.textContent = student.name;
+    //             groupCell.textContent = student.group;
+    //             row.appendChild(idCell);
+    //             row.appendChild(nameCell);
+    //             row.appendChild(groupCell);
+    //             addedTableBody.appendChild(row);
+    //         });
+
+    //         // Заполняем таблицу оставшихся студентов
+    //         remainingStudents.forEach(student => {
+    //             const row = document.createElement('tr');
+    //             const idCell = document.createElement('td');
+    //             const nameCell = document.createElement('td');
+    //             const groupCell = document.createElement('td');
+    //             idCell.textContent = student.id;
+    //             nameCell.textContent = student.name;
+    //             groupCell.textContent = student.group;
+    //             row.appendChild(idCell);
+    //             row.appendChild(nameCell);
+    //             row.appendChild(groupCell);
+    //             remainingTableBody.appendChild(row);
+    //         });
+    //     }
+
+    //     // При загрузке страницы обновляем таблицы
+    //     updateTables();
+
+    //     // Функция для показа алерта
+    //     function showAlert(message) {
+    //         alertBox.textContent = message;
+    //         alertBox.classList.add('show');
+    //         setTimeout(() => {
+    //             alertBox.classList.remove('show');
+    //         }, 7000); // Убираем алерт через 3 секунды
+    //     }
+
+    //     // Обработчик для кнопки перемещения студентов
+    //     generateButton.addEventListener('click', function () {
+    //         if (remainingStudents.length > 0) {
+    //             // Выбираем случайного студента
+    //             const randomIndex = Math.floor(Math.random() * remainingStudents.length);
+    //             const student = remainingStudents.splice(randomIndex, 1)[0];
+
+    //             // Показываем алерт с информацией о студенте
+    //             showAlert(`Оқушының есімі:  ${student.name}, тобы:  ${student.group}`);
+
+    //             // Добавляем его в список добавленных студентов после скрытия алерта
+    //             setTimeout(() => {
+    //                 addedStudents.push(student);
+
+    //                 // Сохраняем обновленные данные в Local Storage
+    //                 saveToLocalStorage('remainingStudents', remainingStudents);
+    //                 saveToLocalStorage('addedStudents', addedStudents);
+
+    //                 // Обновляем таблицы
+    //                 updateTables();
+    //             }, 3000); // Добавляем студента после исчезновения алерта
+    //         } else {
+    //             alert("Все студенты уже добавлены.");
+    //         }
+    //     });
+
+    //     // Обработчик для кнопки сброса данных
+    //     resetButton.addEventListener('click', function () {
+    //         // Очищаем Local Storage
+    //         localStorage.removeItem('remainingStudents');
+    //         localStorage.removeItem('addedStudents');
+
+    //         // Сбрасываем данные к исходным
+    //         remainingStudents = [...gifR2];
+    //         addedStudents = [];
+
+    //         // Сохраняем сброшенные данные
+    //         saveToLocalStorage('remainingKey', remainingStudents);
+    //         saveToLocalStorage('addedKey', addedStudents);
+
+    //         // Обновляем таблицы
+    //         updateTables();
+    //     });
+
+        
+
+</script>
+
+
+
+</html>
