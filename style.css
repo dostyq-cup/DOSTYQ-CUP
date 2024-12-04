@@ -369,7 +369,7 @@ body{
         flex-direction: column;
         position:relative;
         left: 55%;
-        bottom: 53.85%;
+        bottom: 55.85%;
         justify-content: space-between;
 
     }
@@ -381,7 +381,7 @@ body{
         display: flex;
         flex-direction: column;
         position: relative;
-        bottom: 545px;
+        bottom: 540px;
         justify-content: space-between;
         margin-top: 35px;
         align-items: center;
